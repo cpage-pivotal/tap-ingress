@@ -20,7 +20,7 @@ metadata:
   namespace: tap-gui
 spec:
   virtualhost:
-    fqdn: #@ "tap-gui.{}".format(data.values.ingress.domain)
+    fqdn: #@ "tap-gui.{}".format(data.values.domain)
     tls:
       secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:
@@ -36,7 +36,7 @@ metadata:
   namespace: app-live-view
 spec:
   virtualhost:
-    fqdn: #@ "app-live-view.{}".format(data.values.ingress.domain)
+    fqdn: #@ "app-live-view.{}".format(data.values.domain)
     tls:
       secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:
@@ -52,7 +52,7 @@ metadata:
   namespace: accelerator-system
 spec:
   virtualhost:
-    fqdn: #@ "accelerator.{}".format(data.values.ingress.domain)
+    fqdn: #@ "accelerator.{}".format(data.values.domain)
     tls:
       secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:

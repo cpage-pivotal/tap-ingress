@@ -1,2 +1,4 @@
+#@ load("@ytt:data", "data")
+
 data:
   default-tls-secret: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)

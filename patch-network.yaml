@@ -1,2 +1,4 @@
+#@ load("@ytt:data", "data")
+
 data:
   domainTemplate: '{{.Name}}-{{.Namespace}}.{{.Domain}}'

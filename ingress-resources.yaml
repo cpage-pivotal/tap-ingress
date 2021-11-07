@@ -22,7 +22,7 @@ spec:
   virtualhost:
     fqdn: #@ "tap-gui.{}".format(data.values.ingress.domain)
     tls:
-      secretName: #@ "{}/{}".format(data.values.ingress.contour_tls_namespace,data.values.ingress.contour_tls_secret)
+      secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:
     - services:
         - name: server
@@ -38,7 +38,7 @@ spec:
   virtualhost:
     fqdn: #@ "app-live-view.{}".format(data.values.ingress.domain)
     tls:
-      secretName: #@ "{}/{}".format(data.values.ingress.contour_tls_namespace,data.values.ingress.contour_tls_secret)
+      secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:
     - services:
         - name: application-live-view-5112
@@ -54,7 +54,7 @@ spec:
   virtualhost:
     fqdn: #@ "accelerator.{}".format(data.values.ingress.domain)
     tls:
-      secretName: #@ "{}/{}".format(data.values.ingress.contour_tls_namespace,data.values.ingress.contour_tls_secret)
+      secretName: #@ "{}/{}".format(data.values.tls.namespace,data.values.tls.secretName)
   routes:
     - services:
         - name: acc-ui-server

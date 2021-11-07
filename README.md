@@ -7,7 +7,7 @@ You will need a DNS domain for your ingress. For our example, we'll use **tap.ex
 
 Create a [Kubernetes TLS Secret](https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets) for your TLS cert.
 
-Customize the values-ingress.yaml file in the root of this repository. Set the **domain** value to your wildcard domain, and the **tls** values to the namespace and secret name of the Kubernetes TLS Secret you created.
+Clone this repo, and customize the [values-ingress.yaml](values-ingress.yaml) file in the root directory. Set the **domain** value to your wildcard domain, and the **tls** values to the namespace and secret name of the Kubernetes TLS Secret you created.
 
 You will need [YTT](https://carvel.dev/ytt/) installed on your local machine.
 

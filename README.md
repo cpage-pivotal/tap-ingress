@@ -41,3 +41,7 @@ This will apply a **TLSCertificateDelegation**, set up multiple **HttpProxy** re
 ## Learning Center ##
 
 If you want to access Learning Center, there is one additional step. Learning Center does not support TLSCertificateDelegation, so you will need to create a copy of your wildcard domain TLS secret into the namespace where Learning Center was installed (**educates** by default).
+
+## Accessing TAP
+
+Once the script is complete, execute `kubectl get httpproxy -A` to see all of the HTTPS endpoints for the TAP components
